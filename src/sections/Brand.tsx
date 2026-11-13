@@ -14,7 +14,7 @@ import park from "../assets/brands/Park College_Logo_06.png";
 import prime from "../assets/brands/Prime Video_Logo_20.png";
 import saj from "../assets/brands/SAJ.png";
 import silverLeaf from "../assets/brands/Silver Leaf_Logo_08.png";
-import sk from "../assets/brands/SK Production_Logo_16.png";
+import sk from "../assets/brands/SK_Production_logo_16.png";
 import ssc from "../assets/brands/SSC_Logo_04.png";
 import storytel from "../assets/brands/Storytel_logo_01.png";
 import sunNext from "../assets/brands/SUN NXT_Logo_19.png";
