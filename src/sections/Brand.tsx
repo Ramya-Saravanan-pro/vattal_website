@@ -10,7 +10,7 @@ import kavithalaya from "../assets/brands/Kavithalayaa_Logo_18.png";
 import ladyo from "../assets/brands/Ladyo_Logo_11.png";
 import mizaj from "../assets/brands/MIZAJ_Logo_09.png";
 import nightShift from "../assets/brands/Night shift Studio_Logo_02.png";
-import park from "../assets/brands/Park_College_Logo_06.png";
+import park from "../assets/brands/Park_College_logo_06.png";
 import prime from "../assets/brands/PrimeVideo_Logo_20.png";
 import saj from "../assets/brands/SAJ.png";
 import silverLeaf from "../assets/brands/Silver_Leaf_Logo_08.png";
