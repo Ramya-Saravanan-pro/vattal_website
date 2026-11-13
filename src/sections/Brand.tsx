@@ -10,21 +10,21 @@ import kavithalaya from "../assets/brands/Kavithalayaa_Logo_18.png";
 import ladyo from "../assets/brands/Ladyo_Logo_11.png";
 import mizaj from "../assets/brands/MIZAJ_Logo_09.png";
 import nightShift from "../assets/brands/Night shift Studio_Logo_02.png";
-import park from "../assets/brands/Park College_Logo_06.png";
-import prime from "../assets/brands/Prime Video_Logo_20.png";
+import park from "../assets/brands/Park_College_Logo_06.png";
+import prime from "../assets/brands/PrimeVideo_Logo_20.png";
 import saj from "../assets/brands/SAJ.png";
-import silverLeaf from "../assets/brands/Silver Leaf_Logo_08.png";
+import silverLeaf from "../assets/brands/Silver_Leaf_Logo_08.png";
 import sk from "../assets/brands/SK_Production_logo_16.png";
 import ssc from "../assets/brands/SSC_Logo_04.png";
 import storytel from "../assets/brands/Storytel_logo_01.png";
-import sunNext from "../assets/brands/SUN NXT_Logo_19.png";
+import sunNext from "../assets/brands/SUNNXT_Logo_19.png";
 import supreme from "../assets/brands/SuPreme_Logo_22.png";
 import thangamayil from "../assets/brands/Thangamayil_Logo_21.png";
 import universal from "../assets/brands/Universal_Logo_03.png";
 import vels from "../assets/brands/VELS Film International_Logo_07.png";
-import vafx from "../assets/brands/Vijay Antony Film Corporation_Logo_23.png";
-import vijayTv from "../assets/brands/Vijay TV_Logo_05.png";
-import ynot from "../assets/brands/YNOT Studios_Logo_13.png";
+import vafx from "../assets/brands/VijayAntonyFilmCorporation_Logo_23.png";
+import vijayTv from "../assets/brands/VijayTV_Logo_05.png";
+import ynot from "../assets/brands/YNOTStudios_Logo_13.png";
 import z5 from "../assets/brands/Zee5_Logo_15.png";
 
 const partners = [
