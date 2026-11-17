@@ -71,6 +71,7 @@ export default function App() {
   return (
     <main className="min-h-screen bg-[#08050D]">
       {phase !== "complete" && (
+        /*
         <section className="fixed inset-0 z-[9999] h-screen w-full overflow-hidden bg-black">
           <video
             ref={introVideoRef}
@@ -134,6 +135,7 @@ export default function App() {
             </div>
           </div>
         </section>
+        */
       )}
 
       {phase === "complete" && (
