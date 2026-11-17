@@ -72,7 +72,7 @@ const steps = [
   {
     no: "01",
     title: "Brief",
-    text: "We start by listening. Goals, audience and the story worth telling.",
+    text: "Every project begins with a purpose. We find it, define it and build around it.",
   },
   {
     no: "02",

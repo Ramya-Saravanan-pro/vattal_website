@@ -492,7 +492,7 @@ const RIGHT: Cell[][] = [
 const TOP: Cell[][] = [
   [["◌", "Reach"], ["◔", "Views"], ["➜", "Leads"]],
   [["₹", "Sales"], ["✓", "Trust"], ["✹", "Buzz"]],
-  [["↑", "Growth"], ["♦", "Loyalty"], ["♥", "Fans"]],
+  [["↑", "Growth"], ["♦", "Subscribers"], ["♥", "Followers"]],
 ];
 const BACK: Cell[][] = [
   [["❖", "Films"], ["↗", "Startups"], ["▦", "Retail"]],

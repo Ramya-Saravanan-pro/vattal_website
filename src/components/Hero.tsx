@@ -649,9 +649,7 @@ export default function Hero() {
               className="max-w-md lg:justify-self-end"
             >
               <p className="text-sm leading-relaxed text-[#F5F1E8]/65 sm:text-base">
-                Brand, film, digital and culture under one roof. One team that
-                builds the identity, shoots the story, launches the site and
-                brings the people.
+                Brand, film, digital and culture under one roof. One team that builds the identity, shoots the story, creates the experience and brings the people.
               </p>
 
               {/* <div className="mt-6 flex flex-wrap items-center gap-4">
