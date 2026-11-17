@@ -5,7 +5,6 @@ import Hero from "./components/Hero";
 import Office from "./sections/Office";
 import Services from "./sections/Services";
 import Work from "./sections/Work";
-import eyeballVideo from "./assets/eyeball.mp4";
 import Brand from "./sections/Brand";
 import Footer from "./sections/Footer";
 import CreativeIdeas from "./sections/CreativeIdeas";
