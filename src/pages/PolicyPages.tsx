@@ -1,5 +1,5 @@
 
-import { ArrowLeft, ArrowUpRight, ShieldCheck, FileText } from "lucide-react";
+import {  ArrowUpRight } from "lucide-react";
 
 const services = [
   ["01", "Brand Building & Positioning", "We write stories and screenplays for your brand."],
@@ -227,7 +227,7 @@ export default function PolicyPages() {
     "/terms-and-conditions";
 
   const sections = isTerms ? terms : privacy;
-  const title = isTerms ? "Terms & Conditions" : "Privacy Policy";
+  // const title = isTerms ? "Terms & Conditions" : "Privacy Policy";
   const subtitle = isTerms
     ? "The terms that govern your use of our website and engagement with Vattal Studios."
     : "How we collect, use and protect information when you interact with Vattal Studios.";

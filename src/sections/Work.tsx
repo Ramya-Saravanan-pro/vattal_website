@@ -3,7 +3,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import aindhamVedham from "../assets/movies/Aindham Vedham.jpg";
 import alaey from "../assets/movies/Alaey.jpg";
 import aneethi from "../assets/movies/Aneethi.jpg";
