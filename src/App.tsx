@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Office from "./sections/Office";
 import Services from "./sections/Services";
 import Work from "./sections/Work";
+import eyeballVideo from "./assets/eyeball.mp4";
 import Brand from "./sections/Brand";
 import Footer from "./sections/Footer";
 import CreativeIdeas from "./sections/CreativeIdeas";
@@ -22,12 +23,7 @@ export default function App() {
 
   const introVideoRef = useRef<HTMLVideoElement>(null);
 
-  const [phase, setPhase] = useState<IntroPhase>(() =>
-    window.location.pathname === "/" ||
-    window.location.pathname === "/index.html"
-      ? "intro"
-      : "complete"
-  );
+  const [phase, setPhase] = useState<IntroPhase>("complete");
 
   useEffect(() => {
     document.body.style.overflow =
@@ -69,8 +65,7 @@ export default function App() {
 
   return (
     <main className="min-h-screen bg-[#08050D]">
-      {phase !== "complete" && (
-        /*
+      {false && (
         <section className="fixed inset-0 z-[9999] h-screen w-full overflow-hidden bg-black">
           <video
             ref={introVideoRef}
@@ -134,7 +129,6 @@ export default function App() {
             </div>
           </div>
         </section>
-        */
       )}
 
       {phase === "complete" && (
