@@ -29,29 +29,29 @@ import theVillage from "../assets/movies/The Village_.jpg";
 import velumMayilum from "../assets/movies/Velum Mayilum.jpg";
 
 const projects = [
-  { title: "Nooru Saami", description: "Movie Promotion", year: "2026", image: nooruSaami },
-  { title: "Aindham Vedham", description: "Movie Promotion", year: "2026", image: aindhamVedham },
-  { title: "Alaey", description: "Movie Promotion", year: "2026", image: alaey },
-  { title: "Aneethi", description: "Movie Promotion", year: "2026", image: aneethi },
-  { title: "DD Next Level", description: "Movie Promotion", year: "2026", image: ddNextLevel },
-  { title: "DD Returns", description: "Movie Promotion", year: "2026", image: ddReturns },
-  { title: "Demonte Colony 2", description: "Movie Promotion", year: "2026", image: demonteColony2 },
-  { title: "Jana Nayagan", description: "Movie Promotion", year: "2026", image: janaNayagan },
-  { title: "Kadaseela Biriyani", description: "Movie Promotion", year: "2026", image: kadaseelaBiriyani },
-  { title: "Koose Munisamy Veerappan", description: "Movie Promotion", year: "2026", image: kooseMunisamy },
-  { title: "Mandela", description: "Movie Promotion", year: "2026", image: mandela },
-  { title: "Office", description: "Movie Promotion", year: "2026", image: office },
-  { title: "Parimala & Co.", description: "Movie Promotion", year: "2026", image: parimalaCo },
-  { title: "Raghu Thatha", description: "Movie Promotion", year: "2026", image: raghuThatha },
-  { title: "Sakthi Thirumagan", description: "Movie Promotion", year: "2026", image: sakthiThirumagan },
-  { title: "SN 2", description: "Movie Promotion", year: "2026", image: sn2 },
-  { title: "SN", description: "Movie Promotion", year: "2026", image: sn },
-  { title: "Test", description: "Movie Promotion", year: "2026", image: test },
   { title: "Thaai Kizhavi", description: "Movie Promotion", year: "2026", image: thaaiKizhavi },
-  { title: "Thalaikoothal", description: "Movie Promotion", year: "2026", image: thalaikoothal },
-  { title: "Thalavettiyaan Paalayam", description: "Movie Promotion", year: "2026", image: thalavettiyaanPaalayam },
-  { title: "The Village", description: "Movie Promotion", year: "2026", image: theVillage },
+  { title: "Jana Nayagan", description: "Movie Promotion", year: "2026", image: janaNayagan },
+  { title: "Parimala & Co.", description: "Movie Promotion", year: "2026", image: parimalaCo },
   { title: "Velum Mayilum", description: "Movie Promotion", year: "2026", image: velumMayilum },
+  { title: "Nooru Saami", description: "Movie Promotion", year: "2026", image: nooruSaami },
+  { title: "Sattamum Needium 2", description: "Movie Promotion", year: "2026", image: sn2 },
+  { title: "Sakthi Thirumagan", description: "Movie Promotion", year: "2026", image: sakthiThirumagan },
+  { title: "DD Next Level", description: "Movie Promotion", year: "2026", image: ddNextLevel },
+  { title: "Test", description: "Movie Promotion", year: "2026", image: test },
+  { title: "Demonte Colony 2", description: "Movie Promotion", year: "2026", image: demonteColony2 },
+  { title: "Raghu Thatha", description: "Movie Promotion", year: "2026", image: raghuThatha },
+  { title: "Koose Munusamy Veerappan", description: "Movie Promotion", year: "2026", image: kooseMunisamy },
+  { title: "Sattamum Needium", description: "Movie Promotion", year: "2026", image: sn },
+  { title: "DD Returns", description: "Movie Promotion", year: "2026", image: ddReturns },
+  { title: "Office", description: "Movie Promotion", year: "2026", image: office },
+  { title: "Thalavettiyaan Paalayam", description: "Movie Promotion", year: "2026", image: thalavettiyaanPaalayam },
+  { title: "Thalaikoothal", description: "Movie Promotion", year: "2026", image: thalaikoothal },
+  { title: "Mandela", description: "Movie Promotion", year: "2026", image: mandela },
+  { title: "The Village", description: "Movie Promotion", year: "2026", image: theVillage },
+  { title: "Aneethi", description: "Movie Promotion", year: "2026", image: aneethi },
+  { title: "Alaey", description: "Movie Promotion", year: "2026", image: alaey },
+  { title: "Kadaseela Biriyani", description: "Movie Promotion", year: "2026", image: kadaseelaBiriyani },
+  { title: "Aindham Vedham", description: "Movie Promotion", year: "2026", image: aindhamVedham },
 ];
 
 const TAU = Math.PI * 2;
@@ -331,7 +331,7 @@ export default function Work() {
             </div>
 
             <div className="flex items-center gap-8">
-              <div className="font-[Manrope] text-sm tabular-nums text-[#F5F1E8]/40">
+              {/* <div className="font-[Manrope] text-sm tabular-nums text-[#F5F1E8]/40">
                 {String(active + 1).padStart(2, "0")}
                 <span className="mx-2 text-[#F5F1E8]/20">/</span>
                 {String(TOTAL).padStart(2, "0")}
@@ -344,7 +344,7 @@ export default function Work() {
               <div className="relative hidden h-11 w-11 items-center justify-center rounded-full border border-[#A77A20]/40 text-[#C69A3B] sm:flex">
                 <span className="absolute inset-[3px] rounded-full border border-[#A77A20]/15" />
                 <ArrowUpRight size={17} />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -370,7 +370,7 @@ export default function Work() {
                     }`}
                   />
 
-                  <div
+                  {/* <div
                     className={`mb-1 font-[Manrope] text-[10px] tabular-nums transition-colors duration-500 ${
                       selected
                         ? "text-[#C69A3B]"
@@ -378,7 +378,7 @@ export default function Work() {
                     }`}
                   >
                     {String(index + 1).padStart(2, "0")}
-                  </div>
+                  </div> */}
 
                   <div
                     className={`font-[Manrope] text-[11px] transition-colors duration-500 sm:text-xs ${

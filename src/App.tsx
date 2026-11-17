@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -9,12 +10,25 @@ import Brand from "./sections/Brand";
 import Footer from "./sections/Footer";
 import CreativeIdeas from "./sections/CreativeIdeas";
 import Testimonials from "./sections/Testimonials";
+import PolicyPages from "./pages/PolicyPages";
 
 type IntroPhase = "intro" | "zoom" | "complete";
 
 export default function App() {
+  const isPolicyPage =
+    window.location.pathname.replace(/\/$/, "") ===
+      "/terms-and-conditions" ||
+    window.location.pathname.replace(/\/$/, "") ===
+      "/privacy-policy";
+
   const introVideoRef = useRef<HTMLVideoElement>(null);
-  const [phase, setPhase] = useState<IntroPhase>("intro");
+
+  const [phase, setPhase] = useState<IntroPhase>(() =>
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html"
+      ? "intro"
+      : "complete"
+  );
 
   useEffect(() => {
     document.body.style.overflow =
@@ -49,6 +63,10 @@ export default function App() {
   const handleIntroEnded = () => {
     startZoom();
   };
+
+  if (isPolicyPage) {
+    return <PolicyPages />;
+  }
 
   return (
     <main className="min-h-screen bg-[#08050D]">
@@ -89,7 +107,6 @@ export default function App() {
               <p className="font-mono text-[10px] tracking-[0.3em] text-white/50">
                 PERSPECTIVE
               </p>
-
               <p className="mt-3 text-2xl font-black tracking-[-0.04em] text-white">
                 WE CREATE.
               </p>
@@ -99,7 +116,6 @@ export default function App() {
               <p className="font-mono text-[10px] tracking-[0.3em] text-white/50">
                 OUTPUT
               </p>
-
               <p className="mt-3 text-2xl font-black tracking-[-0.04em] text-white">
                 WE IMPACT.
               </p>
@@ -121,40 +137,40 @@ export default function App() {
       )}
 
       {phase === "complete" && (
-  <>
-    <Navbar />
+        <>
+          <Navbar />
 
-    <div id="hero" className="scroll-mt-24">
-      <Hero />
-    </div>
+          <div id="hero" className="scroll-mt-24">
+            <Hero />
+          </div>
 
-    <div id="services" className="scroll-mt-24">
-      <Services />
-    </div>
+          <div id="services" className="scroll-mt-24">
+            <Services />
+          </div>
 
-    <Office />
+          <Office />
 
-    <div id="brand" className="scroll-mt-24">
-      <Brand />
-    </div>
+          <div id="brand" className="scroll-mt-24">
+            <Brand />
+          </div>
 
-    <div id="work" className="scroll-mt-24">
-      <Work />
-    </div>
+          <div id="work" className="scroll-mt-24">
+            <Work />
+          </div>
 
-    <div id="ideas" className="scroll-mt-24">
-      <CreativeIdeas />
-    </div>
+          <div id="ideas" className="scroll-mt-24">
+            <CreativeIdeas />
+          </div>
 
-    <div id="testimonials" className="scroll-mt-24">
-      <Testimonials />
-    </div>
+          <div id="testimonials" className="scroll-mt-24">
+            <Testimonials />
+          </div>
 
-    <div id="contact" className="scroll-mt-24">
-      <Footer />
-    </div>
-  </>
-)}
+          <div id="contact" className="scroll-mt-24">
+            <Footer />
+          </div>
+        </>
+      )}
     </main>
   );
 }

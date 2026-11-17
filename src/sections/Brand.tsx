@@ -1,8 +1,10 @@
+
 "use client";
 
 import { motion } from "framer-motion";
 
 import aha from "../assets/brands/Aha_logo_14.png";
+import cdr from "../assets/brands/CDR.png"
 import classicPolo from "../assets/brands/Classic Polo_Logo_12.png";
 import gcc from "../assets/brands/Gcc_Logo_17.png";
 import jio from "../assets/brands/JioHotstar_Logo_10.png";
@@ -29,6 +31,7 @@ import z5 from "../assets/brands/Zee5_Logo_15.png";
 
 const partners = [
   { name: "Aha", logo: aha },
+  {name: "cdr", logo: cdr},
   { name: "Classic Polo", logo: classicPolo },
   { name: "GCC", logo: gcc },
   { name: "JioHotstar", logo: jio },
@@ -54,8 +57,39 @@ const partners = [
   { name: "Zee5", logo: z5 },
 ];
 
-const row1 = partners.slice(0, 12);
-const row2 = partners.slice(12);
+const row1 = [
+  { name: "Universal", logo: universal },
+  { name: "VELS Film International", logo: vels },
+  { name: "Vijay Antony Film Corporation", logo: vafx },
+  { name: "Vijay TV", logo: vijayTv },
+  { name: "Sun NXT", logo: sunNext },
+  { name: "SK Production", logo: sk },
+  { name: "Zee5", logo: z5 },
+  { name: "YNOT Studios", logo: ynot },
+];
+
+const row2 = [
+  { name: "Park College", logo: park },
+  { name: "Sri Amman Jewellers", logo: saj },
+  { name: "Silver Leaf", logo: silverLeaf },
+  { name: "Classic Polo", logo: classicPolo },
+  { name: "GCC", logo: gcc },
+  { name: "Ladyo", logo: ladyo },
+  { name: "Mizaj", logo: mizaj },
+  {name: "cdr", logo: cdr}
+];
+
+const row3 = [
+  { name: "Aha", logo: aha },
+  { name: "JioHotstar", logo: jio },
+  { name: "Kavithalayaa", logo: kavithalaya },
+  { name: "Night Shift Studio", logo: nightShift },
+  { name: "Prime Video", logo: prime },
+  { name: "SSC", logo: ssc },
+  { name: "Storytel", logo: storytel },
+  { name: "SuPreme", logo: supreme },
+  { name: "Thangamayil", logo: thangamayil },
+];
 
 function ConnectionVideo() {
   return (
@@ -69,17 +103,7 @@ function ConnectionVideo() {
         ease: [0.22, 1, 0.36, 1],
       }}
       className="pointer-events-none absolute right-0 top-0 z-10 hidden w-36 overflow-hidden sm:w-40 md:block lg:right-2 lg:w-48"
-    >
-      {/* <video
-  src={connectionVideo}
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="metadata"
-  className="block h-auto w-full object-contain mix-blend-multiply"
-/> */}
-    </motion.div>
+    />
   );
 }
 
@@ -140,7 +164,6 @@ export default function Brand() {
       id="brands"
       className="relative overflow-hidden bg-white py-16 text-[#0B1B3A] sm:py-20 md:py-24"
     >
-      {/* Background grid */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -150,12 +173,10 @@ export default function Brand() {
         }}
       />
 
-      {/* Ambient yellow glow */}
       <div className="pointer-events-none absolute -left-40 top-0 h-[420px] w-[420px] rounded-full bg-[#F5B921]/[0.10] blur-[130px]" />
 
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#F5B921]/[0.08] blur-[130px]" />
 
-      {/* Heading and corner video */}
       <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -195,16 +216,40 @@ export default function Brand() {
         </motion.div>
       </div>
 
-      {/* Brand logo marquees */}
       <div className="relative w-full">
-        <MarqueeRow items={row1} direction="left" duration={35} />
+        <div className="hidden sm:block">
+          <MarqueeRow items={row1} direction="left" duration={35} />
 
-        <div className="mx-auto h-px w-[75%] bg-[#0B1B3A]/10" />
+          <div className="mx-auto h-px w-[75%] bg-[#0B1B3A]/10" />
 
-        <MarqueeRow items={row2} direction="right" duration={35} />
+          <MarqueeRow
+            items={[...row2, ...row3]}
+            direction="right"
+            duration={45}
+          />
+        </div>
+
+        <div className="sm:hidden">
+          <MarqueeRow
+            items={row1.slice(0, 5)}
+            direction="left"
+            duration={30}
+          />
+
+          <MarqueeRow
+            items={[...row1.slice(5), ...row2.slice(0, 2)]}
+            direction="right"
+            duration={35}
+          />
+
+          <MarqueeRow
+            items={[...row2.slice(2), ...row3]}
+            direction="left"
+            duration={40}
+          />
+        </div>
       </div>
 
-      {/* Footer */}
       <div className="relative mx-auto mt-8 flex max-w-[1400px] items-center justify-center gap-4 px-5 sm:mt-10 sm:gap-8 sm:px-8 lg:px-12">
         <div className="h-px flex-1 bg-[#0B1B3A]/10" />
 
