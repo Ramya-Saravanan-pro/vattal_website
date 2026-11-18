@@ -276,12 +276,7 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-              <a
-                href="/privacy-policy"
-                className="transition-colors hover:text-white"
-              >
-                Privacy Policy
-              </a>
+              
 
               <a
                 href="/terms-and-conditions"
@@ -291,6 +286,13 @@ export default function Footer() {
               </a>
 
               <a
+                href="/privacy-policy"
+                className="transition-colors hover:text-white"
+              >
+                Privacy Policy
+              </a>
+
+              {/* <a
                 href="#top"
                 className="group inline-flex items-center gap-2 transition-colors hover:text-[#F5B921]"
               >
@@ -299,7 +301,7 @@ export default function Footer() {
                   size={14}
                   className="-rotate-45 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

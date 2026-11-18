@@ -3,6 +3,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+
 import aindhamVedham from "../assets/movies/Aindham Vedham.jpg";
 import alaey from "../assets/movies/Alaey.jpg";
 import aneethi from "../assets/movies/Aneethi.jpg";
@@ -117,8 +118,7 @@ export default function Work() {
     return () => cancelAnimationFrame(raf);
   }, [reduce]);
 
-  const active =
-    ((Math.round(rot / STEP) % TOTAL) + TOTAL) % TOTAL;
+  const active = ((Math.round(rot / STEP) % TOTAL) + TOTAL) % TOTAL;
 
   const rotateTo = (index: number) => {
     if (TOTAL <= 1) return;
@@ -135,12 +135,7 @@ export default function Work() {
 
   const mobile = width < 640;
 
-  const cardW = mobile
-    ? 180
-    : width < 1024
-      ? 250
-      : 290;
-
+  const cardW = mobile ? 180 : width < 1024 ? 250 : 290;
   const cardH = Math.round((cardW * 4) / 3);
 
   const radius = mobile
@@ -187,6 +182,52 @@ export default function Work() {
             perspective: 1600,
           }}
         >
+          <div className="pointer-events-none absolute inset-0 z-[200] flex items-center justify-between px-0 sm:px-2 lg:px-4">
+            <motion.button
+              type="button"
+              onClick={() => rotateTo((active - 1 + TOTAL) % TOTAL)}
+              whileHover={{ scale: 1.08, x: -3 }}
+              whileTap={{ scale: 0.92 }}
+              aria-label="Previous movie"
+              className="pointer-events-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#C69A3B]/40 bg-[#0B1B3A]/85 text-[#C69A3B] shadow-lg shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:border-[#C69A3B] hover:bg-[#C69A3B] hover:text-[#060F22] sm:h-12 sm:w-12"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5 sm:h-6 sm:w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M19 12H5" />
+                <path d="m12 19-7-7 7-7" />
+              </svg>
+            </motion.button>
+
+            <motion.button
+              type="button"
+              onClick={() => rotateTo((active + 1) % TOTAL)}
+              whileHover={{ scale: 1.08, x: 3 }}
+              whileTap={{ scale: 0.92 }}
+              aria-label="Next movie"
+              className="pointer-events-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#C69A3B]/40 bg-[#0B1B3A]/85 text-[#C69A3B] shadow-lg shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:border-[#C69A3B] hover:bg-[#C69A3B] hover:text-[#060F22] sm:h-12 sm:w-12"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5 sm:h-6 sm:w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </motion.button>
+          </div>
+
           <div
             className="pointer-events-none absolute left-1/2 top-1/2 rounded-[50%] border border-[#A77A20]/25"
             style={{
@@ -207,20 +248,11 @@ export default function Work() {
             const x = Math.sin(theta) * radius;
             const y = -(1 - near) * LIFT;
 
-            const scale =
-              0.34 + 0.66 * Math.pow(near, 1.15);
-
+            const scale = 0.34 + 0.66 * Math.pow(near, 1.15);
             const tilt = -Math.sin(theta) * 32;
-
-            const opacity =
-              0.22 + 0.78 * near;
-
-            const blur =
-              (1 - near) * 7;
-
-            const label =
-              clamp((depth - 0.7) / 0.3, 0, 1);
-
+            const opacity = 0.22 + 0.78 * near;
+            const blur = (1 - near) * 7;
+            const label = clamp((depth - 0.7) / 0.3, 0, 1);
             const front = i === active;
 
             return (
@@ -328,23 +360,6 @@ export default function Work() {
                 {projects[active].title}
               </motion.h3>
             </div>
-
-            <div className="flex items-center gap-8">
-              {/* <div className="font-[Manrope] text-sm tabular-nums text-[#F5F1E8]/40">
-                {String(active + 1).padStart(2, "0")}
-                <span className="mx-2 text-[#F5F1E8]/20">/</span>
-                {String(TOTAL).padStart(2, "0")}
-              </div>
-
-              <div className="font-[Manrope] text-sm text-[#F5F1E8]/45">
-                {projects[active].year}
-              </div>
-
-              <div className="relative hidden h-11 w-11 items-center justify-center rounded-full border border-[#A77A20]/40 text-[#C69A3B] sm:flex">
-                <span className="absolute inset-[3px] rounded-full border border-[#A77A20]/15" />
-                <ArrowUpRight size={17} />
-              </div> */}
-            </div>
           </div>
 
           <div className="mt-8 grid grid-cols-2 border-t border-[#A77A20]/15 sm:grid-cols-3 lg:grid-cols-5">
@@ -368,16 +383,6 @@ export default function Work() {
                       selected ? "h-4" : "group-hover:h-3"
                     }`}
                   />
-
-                  {/* <div
-                    className={`mb-1 font-[Manrope] text-[10px] tabular-nums transition-colors duration-500 ${
-                      selected
-                        ? "text-[#C69A3B]"
-                        : "text-[#F5F1E8]/25 group-hover:text-[#F5F1E8]/45"
-                    }`}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </div> */}
 
                   <div
                     className={`font-[Manrope] text-[11px] transition-colors duration-500 sm:text-xs ${

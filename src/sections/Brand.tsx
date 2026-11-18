@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 
 import aha from "../assets/brands/Aha_logo_14.png";
-import cdr from "../assets/brands/CDR.png"
+import cdr from "../assets/brands/CDR.png";
 import classicPolo from "../assets/brands/Classic Polo_Logo_12.png";
 import gcc from "../assets/brands/Gcc_Logo_17.png";
 import jio from "../assets/brands/JioHotstar_Logo_10.png";
@@ -31,65 +31,34 @@ import z5 from "../assets/brands/Zee5_Logo_15.png";
 
 const partners = [
   { name: "Aha", logo: aha },
-  {name: "cdr", logo: cdr},
-  { name: "Classic Polo", logo: classicPolo },
-  { name: "GCC", logo: gcc },
   { name: "JioHotstar", logo: jio },
-  { name: "Kavithalayaa", logo: kavithalaya },
-  { name: "Ladyo", logo: ladyo },
-  { name: "Mizaj", logo: mizaj },
-  { name: "Night Shift Studio", logo: nightShift },
-  { name: "Park College", logo: park },
   { name: "Prime Video", logo: prime },
-  { name: "Sri Amman Jewellers", logo: saj },
-  { name: "Silver Leaf", logo: silverLeaf },
   { name: "SK Production", logo: sk },
-  { name: "SSC", logo: ssc },
   { name: "Storytel", logo: storytel },
   { name: "Sun NXT", logo: sunNext },
-  { name: "SuPreme", logo: supreme },
-  { name: "Thangamayil", logo: thangamayil },
   { name: "Universal", logo: universal },
   { name: "VELS Film International", logo: vels },
   { name: "Vijay Antony Film Corporation", logo: vafx },
   { name: "Vijay TV", logo: vijayTv },
   { name: "YNOT Studios", logo: ynot },
   { name: "Zee5", logo: z5 },
-];
-
-const row1 = [
-  { name: "Universal", logo: universal },
-  { name: "VELS Film International", logo: vels },
-  { name: "Vijay Antony Film Corporation", logo: vafx },
-  { name: "Vijay TV", logo: vijayTv },
-  { name: "Sun NXT", logo: sunNext },
-  { name: "SK Production", logo: sk },
-  { name: "Zee5", logo: z5 },
-  { name: "YNOT Studios", logo: ynot },
-];
-
-const row2 = [
+  { name: "CDR", logo: cdr },
+  { name: "Classic Polo", logo: classicPolo },
+  { name: "GCC", logo: gcc },
+  { name: "Kavithalayaa", logo: kavithalaya },
+  { name: "Ladyo", logo: ladyo },
+  { name: "Mizaj", logo: mizaj },
+  { name: "Night Shift Studio", logo: nightShift },
   { name: "Park College", logo: park },
   { name: "Sri Amman Jewellers", logo: saj },
   { name: "Silver Leaf", logo: silverLeaf },
-  { name: "Classic Polo", logo: classicPolo },
-  { name: "GCC", logo: gcc },
-  { name: "Ladyo", logo: ladyo },
-  { name: "Mizaj", logo: mizaj },
-  {name: "cdr", logo: cdr}
-];
-
-const row3 = [
-  { name: "Aha", logo: aha },
-  { name: "JioHotstar", logo: jio },
-  { name: "Kavithalayaa", logo: kavithalaya },
-  { name: "Night Shift Studio", logo: nightShift },
-  { name: "Prime Video", logo: prime },
   { name: "SSC", logo: ssc },
-  { name: "Storytel", logo: storytel },
   { name: "SuPreme", logo: supreme },
   { name: "Thangamayil", logo: thangamayil },
 ];
+
+const row1 = partners.slice(0, 12);
+const row2 = partners.slice(12);
 
 function ConnectionVideo() {
   return (
@@ -222,11 +191,7 @@ export default function Brand() {
 
           <div className="mx-auto h-px w-[75%] bg-[#0B1B3A]/10" />
 
-          <MarqueeRow
-            items={[...row2, ...row3]}
-            direction="right"
-            duration={45}
-          />
+          <MarqueeRow items={row2} direction="right" duration={45} />
         </div>
 
         <div className="sm:hidden">
@@ -237,13 +202,13 @@ export default function Brand() {
           />
 
           <MarqueeRow
-            items={[...row1.slice(5), ...row2.slice(0, 2)]}
+            items={row1.slice(5, 10)}
             direction="right"
             duration={35}
           />
 
           <MarqueeRow
-            items={[...row2.slice(2), ...row3]}
+            items={[...row1.slice(10), ...row2]}
             direction="left"
             duration={40}
           />
@@ -254,7 +219,7 @@ export default function Brand() {
         <div className="h-px flex-1 bg-[#0B1B3A]/10" />
 
         <span className="shrink-0 text-[9px] font-bold uppercase tracking-[0.16em] text-[#0B1B3A]/50 sm:text-xs sm:tracking-[0.25em]">
-          {partners.length} Partners · Countless Stories
+         Partners · Countless Stories
         </span>
 
         <div className="h-px flex-1 bg-[#0B1B3A]/10" />

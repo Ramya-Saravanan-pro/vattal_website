@@ -232,7 +232,7 @@ export default function PolicyPages() {
     ? "The terms that govern your use of our website and engagement with Vattal Studios."
     : "How we collect, use and protect information when you interact with Vattal Studios.";
 
-  const documentLabel = isTerms ? "LEGAL DOCUMENT / 01" : "LEGAL DOCUMENT / 02";
+  const documentLabel = isTerms ? "LEGAL DOCUMENT" : "LEGAL DOCUMENT";
 
   const sectionId = (index: number) => `policy-section-${index}`;
 

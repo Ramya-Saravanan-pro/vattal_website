@@ -817,15 +817,15 @@ const VattalCube = ({ reduce }: { reduce: boolean }) => {
 
       <p className="mt-2 text-sm font-bold text-[#0B1B3A]">{FACES[face].title}</p>
 
-      <div className="mt-3 flex max-w-[330px] flex-wrap justify-center gap-1.5">
+      <div className="mt-3 flex max-w-[430px] flex-wrap justify-center gap-1.5">
         {FACES.map((f, i) => (
           <button key={f.tab} type="button" onClick={() => pick(i)} aria-pressed={face === i} className={chip(face === i)}>
             {f.tab}
           </button>
         ))}
-        <button type="button" onClick={auto ? undefined : resume} aria-pressed={auto} className={chip(auto, true)}>
+        {/* <button type="button" onClick={auto ? undefined : resume} aria-pressed={auto} className={chip(auto, true)}>
           Auto
-        </button>
+        </button> */}
       </div>
     </div>
   );
