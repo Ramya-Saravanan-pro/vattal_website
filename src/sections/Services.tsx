@@ -560,7 +560,6 @@ const VattalCube = ({ reduce }: { reduce: boolean }) => {
   const autoRef = useRef(true);
   const cmd = useRef<"manual" | "auto" | null>(null);
   const [face, setFace] = useState(0);
-  const [auto, setAuto] = useState(true);
   const [k, setK] = useState(1);
 
   useEffect(() => {
@@ -578,14 +577,9 @@ const VattalCube = ({ reduce }: { reduce: boolean }) => {
     autoRef.current = false;
     cmd.current = "manual";
     setFace(i);
-    setAuto(false);
   };
 
-  const resume = () => {
-    autoRef.current = true;
-    cmd.current = "auto";
-    setAuto(true);
-  };
+  
 
   useEffect(() => {
     const state = START.map((p) => ({ pos: [...p] as Vec, m: IDENTITY }));
