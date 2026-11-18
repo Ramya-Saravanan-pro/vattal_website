@@ -218,7 +218,7 @@ export default function Footer() {
                   <span>{EMAIL}</span>
                 </a>
 
-                <a
+                {/* <a
                   href={emailUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -226,7 +226,7 @@ export default function Footer() {
                 >
                   Get in touch
                   <ArrowUpRight size={16} />
-                </a>
+                </a> */}
               </div>
             </div>
 
