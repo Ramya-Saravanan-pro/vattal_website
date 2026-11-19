@@ -39,11 +39,7 @@ const testimonials = [
   {
     id: "05",
     quote:
-      "Partnering with Vattal Media over the past year has been a game-changer for our brand. When we started working together, our social media presence was modest at just 200 followers. Within just 12 months, their team driven by exceptional creativity, strategic insight, and relentless execution scaled our community to over 16,000 engaged followers.",
-    continuation:
-      "Vattal Media consistently delivers top-tier media and social media management. Their work on our latest 2026 collections was nothing short of remarkable—bringing fresh, original concepts to life and perfectly capturing our brand’s identity.",
-    closing:
-      "They are far more than an agency; they are an invaluable extended team. If you are looking for a team that delivers tangible growth, stunning creative direction, and seamless collaboration, we cannot recommend Vattal Media highly enough.",
+      "Partnering with Vattal Media has transformed our brand's digital presence. In just 12 months, they grew our social media community from 200 to over 16,000 engaged followers through creative excellence and strategic execution. Their work on our 2026 collections beautifully captured our brand identity with fresh, original concepts. More than an agency, they are a trusted extension of our team. We highly recommend Vattal Media for their creativity, measurable growth, and seamless collaboration.",
     name: "Aswathh Krishnan",
     role: "Founder",
     company: "Ladyo Premium Innerwear",
@@ -177,19 +173,7 @@ function TestimonialCard({
           <p className="text-[0.98rem] font-medium leading-[1.7] tracking-[-0.012em] text-[#F5F1E8] sm:text-[1.04rem] lg:text-[1.08rem]">
             {testimonial.quote}
           </p>
-
-          {testimonial.continuation && (
-            <p className="mt-6 text-sm leading-7 text-white/40">
-              {testimonial.continuation}
-            </p>
-          )}
-
-          {testimonial.closing && (
-            <p className="mt-5 text-sm leading-7 text-white/40">
-              {testimonial.closing}
-            </p>
-          )}
-
+          
           <div className="mt-8 flex items-end justify-between border-t border-white/10 pt-6">
             <div>
               <p className="text-sm font-bold text-[#F5B921]">
