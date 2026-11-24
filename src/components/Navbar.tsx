@@ -13,7 +13,7 @@ import {
   MessageSquareQuote,
   Mail,
 } from "lucide-react";
-import vattalLogo from "../assets/Vattal Studios.png";
+import vattalLogo from "/vattal-studios.png";
 
 const navItems = [
   { label: "Home", href: "#hero", icon: House },
